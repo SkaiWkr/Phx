@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include same head content as index.htm -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        /* Include same base styles as index.htm */
+
+        /* New styles for banner and text section */
+        .banner-card {
+            text-align: center;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #ffd700;
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            transition: all 0.3s ease;
+            transform: scale(1);
+            box-sizing: border-box;
+        }
+
+        /* Remove the gradient pseudo-element */
+        .banner-card::before {
+            display: none;
+        }
+
+        .banner-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .banner-card:hover {
+            transform: scale(1.02);
+            border-color: #ffed4a;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .text-content {
+            text-align: left;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid #ffd700;
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            box-sizing: border-box;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .text-content .section {
+            margin: 35px 0;
+            padding: 0 20px;
+        }
+
+        .text-content h1 {
+            font-size: 2.8em;
+            margin-bottom: 40px;
+            color: #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .text-content .price {
+            font-size: 1.8em;
+            color: #ffd700;
+            margin: 30px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .text-content h2 {
+            font-size: 1.6em;
+            color: #ffd700;
+            margin: 20px 0 15px 0;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .text-content p, .text-content li {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 10px 0;
+        }
+
+        .text-content ul {
+            list-style: none;
+            padding-left: 25px;
+        }
+
+        .text-content li {
+            margin: 20px 0;
+        }
+
+        /* Add background and blur effect styles */
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background: transparent;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('bg2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            filter: blur(8px);
+            z-index: -1;
+            transform: scale(1.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Update container background to transparent */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            background: transparent;
+            overflow-x: hidden;
+        }
+
+        /* Add mobile responsive styles */
+        @media screen and (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .container {
+                padding: 10px;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .banner-card {
+                width: 95%;
+                padding: 15px;
+                margin: 10px auto;
+            }
+
+            .banner-image {
+                max-height: 300px;
+                width: 100%;
+            }
+
+            .text-content {
+                width: 95%;
+                padding: 20px;
+                margin: 10px auto;
+            }
+
+            .text-content .section {
+                padding: 0 10px;
+            }
+        }
+
+        /* Small mobile devices */
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 5px;
+            }
+
+            .banner-card {
+                width: 98%;
+                padding: 10px;
+            }
+
+            .banner-image {
+                max-height: 250px;
+            }
+
+            .text-content {
+                width: 98%;
+                padding: 15px;
+            }
+
+            .text-content h1 {
+                font-size: 1.6em;
+            }
+
+            .text-content .price {
+                font-size: 1.2em;
+            }
+
+            .text-content h2 {
+                font-size: 1.2em;
+            }
+
+            .text-content p, .text-content li {
+                font-size: 0.95em;
+            }
+        }
+
+        /* Fix double ul issue */
+        .text-content ul ul {
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include same navbar as index.htm -->
+
+    <div class="container">
+        <div class="banner-card">
+            <img src="java poster .png" alt="DSA Course Banner" class="banner-image">
+        </div>
+
+        <div class="text-content">
+            <h1>🚀 Master Data Structures & Algorithms</h1>
+            <p class="tagline">Crack Top Tech Interviews</p>
+            
+            <div class="price">
+                💎 Level Up Your Problem Solving Skills!
+            </div>
+            
+            <div class="section highlight-section">
+                <p class="highlight">🎯 Think. Code. Optimize.</p>
+                <p class="highlight">💻 From Basic to Advanced DSA</p>
+                <p class="highlight">🏆 Interview-Ready Problem Solving</p>
+            </div>
+
+            <div class="section">
+                <h2>🎓 Course Coverage</h2>
+                <ul>
+                    <li>⚡ Core DSA Concepts
+                        <span class="course-brief">Arrays, Linked Lists, Trees, Graphs & More</span>
+                    </li>
+                    <li>🔥 Advanced Problem Solving
+                        <span class="course-brief">Dynamic Programming & Complex Algorithms</span>
+                    </li>
+                    <li>💫 Interview Preparation
+                        <span class="course-brief">FAANG-Level Coding Questions</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>✨ Why Choose Our DSA Course?</h2>
+                <ul>
+                    <li>🎯 Structured Learning Path</li>
+                    <li>💻 200+ Coding Problems</li>
+                    <li>🚀 Pattern-Based Approach</li>
+                    <li>👥 Mock Interviews</li>
+                    <li>❓ 24/7 Doubt Resolution</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🌟 What You'll Get</h2>
+                <ul>
+                    <li>📚 Comprehensive DSA Material</li>
+                    <li>🎯 Interview Strategy Sessions</li>
+                    <li>💼 Problem Solving Workshops</li>
+                    <li>🏆 Contest Preparation</li>
+                    <li>🎓 Performance Certification</li>
+                </ul>
+            </div>
+
+            <div class="section cta-section" style="text-align: center; margin-top: 40px;">
+                <p class="cta-main">🚀 Ready to Master DSA?</p>
+                <p class="cta-sub">Limited Seats Available!</p>
+                <div class="contact-info">
+                    <p>📱 Contact: +91 XXXXXXXXXX</p>
+                    <p>📧 Email: contact@phoenixalgo.in</p>
+                    <p>👉 <a href="https://discord.gg/w32W8pNYkK" target="_blank" class="discord-link">Join Our Discord Community</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include same scripts as index.htm -->
+</body>
+</html>
