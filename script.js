@@ -222,4 +222,21 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.borderColor = '#ffd700';
         });
     });
+
+    // Update the team link click handler
+    document.querySelector('a[href="#team"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        const teamSection = document.querySelector('.team');
+        const headerOffset = 70;
+        const elementPosition = teamSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+
+        // Close mobile menu if open
+        navContainer.classList.remove('active');
+    });
 });
