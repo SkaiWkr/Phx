@@ -240,11 +240,35 @@ document.addEventListener('DOMContentLoaded', function() {
         navContainer.classList.remove('active');
     });
 
+    // Update the contact link click handler
+    document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        const footerSection = document.querySelector('.footer');
+        const headerOffset = 70;
+        const elementPosition = footerSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+
+        navContainer.classList.remove('active');
+    });
+
     // Use event delegation for better performance
     document.addEventListener('click', function(event) {
         if (event.target.matches('.learn-more-btn')) {
             // Handle button click
             handleLearnMore(event.target);
+        }
+        if (event.target.matches('a[href="#contact"]')) {
+            event.preventDefault();
+            document.querySelector('.footer').scrollIntoView({ behavior: 'smooth' });
+        }
+        if (event.target.matches('a[href="#team"]')) {
+            event.preventDefault();
+            document.getElementById('team').scrollIntoView({ behavior: 'smooth' });
         }
     });
 
