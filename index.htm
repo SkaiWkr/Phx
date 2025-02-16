@@ -51,7 +51,7 @@
             padding: 30px;  /* Increased internal padding */
             display: flex;
             flex-direction: column;
-            gap: 20px;  /* Added gap between elements */
+            justify-content: space-between;  /* Ensure space between elements */
             transition: all 0.3s ease;
             position: relative;
         }
@@ -995,12 +995,6 @@
         </div>
     </nav>
 
-    <!-- Logo Section -->
-    <div class="logo-container">  <!-- Added logo container -->
-        <img src="icon.png" alt="Logo">  <!-- Replace with your logo path -->
-        <div class="logo-text">PhoenixAlgo</div>  <!-- Text next to the logo -->
-    </div>
-
     <div class="container">
         <h1>Courses Offered</h1>
         
@@ -1128,21 +1122,26 @@
         </div>
     </div>
     <div class="footer" style="
-     padding: 15px 30px;
-     text-align: center;
-     color: #fff;
-     border-top: none;
-     position: relative;
-     bottom: 1;
-     width: 100%;">
-                <h3 style="color: #fff; text-shadow: 1px 1px 0 #000;">PhoenixAlgo</h3>
-                <h4 style="color: #fff; text-shadow: 1px 1px 0 #000;">From Syntax To Success </h4>
-                <div class="contact-info">
-                    <p style="color: #fff; text-shadow: 1px 1px 0 #000;">📱 Contact: +91 7721874530</p>
-                    <p style="color: #fff; text-shadow: 1px 1px 0 #000;">📧 Email: phoenixalgoo@gmail.com</p>
-                    <p style="color: #fff; text-shadow: 1px 1px 0 #000;">📍 Mode: Online + Weekly Offline Sessions </p>
-                </div>
-            </div>
+        padding: 15px 30px;
+        color: #fff;
+        border-top: none;
+        position: relative;
+        bottom: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;  /* Align items to the left */
+    ">
+        <div style="text-align: center; width: 100%;">  <!-- Center the heading and subtitle -->
+            <h3 style="color: #fff; text-shadow: 1px 1px 0 #000;">PhoenixAlgo</h3>
+            <h4 style="color: #fff; text-shadow: 1px 1px 0 #000;">From Syntax To Success</h4>
+        </div>
+        <div class="contact-info" style="text-align: left; width: 100%;">  <!-- Ensure contact info is left-aligned -->
+            <p style="color: #fff; text-shadow: 1px 1px 0 #000;">📱 Contact: +91 7721874530</p>
+            <p style="color: #fff; text-shadow: 1px 1px 0 #000;">📧 Email: phoenixalgoo@gmail.com</p>
+            <p style="color: #fff; text-shadow: 1px 1px 0 #000;">📍 Mode: Online + Weekly Offline Sessions</p>
+        </div>
+    </div>
     
     
 
