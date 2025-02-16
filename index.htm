@@ -911,6 +911,54 @@
                 margin-bottom: 15px;
             }
         }
+
+        /* Add styles for the logo and text */
+        .logo-container {
+            display: flex;
+            align-items: center; /* Align items in the center vertically */
+            justify-content: center; /* Center the logo container */
+            margin: 20px; /* Add some margin for spacing */
+        }
+
+        .logo-container img {
+            width: 100px; /* Increased size of the logo */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between logo and text */
+        }
+
+        .logo-text {
+            color: #ffffff; /* Neon white color */
+            text-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff; /* Reduced neon effect for better readability */
+            border: 1px solid #000; /* Black border */
+            padding: 10px; /* Increased padding for better spacing */
+            font-family: 'Oswald', sans-serif; /* Use a specific font */
+            font-size: 2em; /* Increased font size for better visibility */
+            text-align: left; /* Align text to the left */
+            border-radius: 5px; /* Rounded corners for a more professional look */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+        }
+
+        .container {
+            margin-top: 0; /* Remove any top margin to eliminate empty space */
+            padding: 20px; /* Add padding for content spacing */
+        }
+
+        /* Additional styles for responsiveness */
+        @media screen and (max-width: 768px) {
+            .logo-container {
+                flex-direction: row; /* Keep items in a row for mobile */
+                margin: 10px; /* Adjust margin for mobile view */
+            }
+
+            .logo-container img {
+                width: 80px; /* Adjust logo size for mobile */
+            }
+
+            .logo-text {
+                font-size: 1.5em; /* Adjust text size for mobile */
+                padding: 5px; /* Adjust padding for mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -946,6 +994,12 @@
             </div>
         </div>
     </nav>
+
+    <!-- Logo Section -->
+    <div class="logo-container">  <!-- Added logo container -->
+        <img src="icon.png" alt="Logo">  <!-- Replace with your logo path -->
+        <div class="logo-text">PhoenixAlgo</div>  <!-- Text next to the logo -->
+    </div>
 
     <div class="container">
         <h1>Courses Offered</h1>
