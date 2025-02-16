@@ -239,4 +239,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close mobile menu if open
         navContainer.classList.remove('active');
     });
+
+    // Use event delegation for better performance
+    document.addEventListener('click', function(event) {
+        if (event.target.matches('.learn-more-btn')) {
+            // Handle button click
+            handleLearnMore(event.target);
+        }
+    });
+
+    // Function to handle "Learn More" button click
+    function handleLearnMore(button) {
+        // ... existing logic ...
+    }
+
+    // Optimize loops by caching length
+    const items = document.querySelectorAll('.item');
+    const itemsLength = items.length;
+    for (let i = 0; i < itemsLength; i++) {
+        // ... existing logic ...
+    }
 });
