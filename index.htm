@@ -774,15 +774,12 @@
         /* Mobile responsive navbar */
         @media screen and (max-width: 768px) {
             .navbar {
-                justify-content: flex-end;
-            }
-
-            .menu-toggle {
-                display: block;
+                justify-content: space-between;  /* Space between logo and menu toggle */
+                padding: 10px 15px;  /* Adjusted padding for mobile */
             }
 
             .nav-container {
-                display: none;
+                display: none;  /* Hide nav container by default */
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -790,28 +787,31 @@
                 background: rgba(20, 20, 20, 0.95);
                 flex-direction: column;
                 padding: 10px 0;
+                z-index: 100;  /* Ensure it appears above other content */
             }
 
             .nav-container.active {
-                display: flex;
+                display: flex;  /* Show nav container when active */
             }
 
             .nav-links {
-                width: 100%;
-                text-align: center;
+                width: 100%;  /* Full width for nav links */
+                text-align: center;  /* Center align text */
             }
 
-            .dropdown {
-                position: static;
-                width: 100%;
-                background: rgba(40, 40, 40, 0.95);
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
+            .nav-links > a {
+                padding: 12px 15px;  /* Adjusted padding for links */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);  /* Added border for separation */
             }
 
-            .nav-links.active .dropdown {
-                max-height: 300px; /* Adjust this value based on your content */
+            .menu-toggle {
+                display: block;  /* Ensure menu toggle button is visible */
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 1.5em;
+                cursor: pointer;
+                z-index: 101;  /* Ensure it appears above other content */
             }
         }
 
@@ -990,11 +990,12 @@
     </div>
 
     <nav class="navbar">
-        <button class="menu-toggle">☰</button>
-        <div class="nav-container">
-            <div class="nav-links">
-                <a href="#home">Home</a>
-            </div>
+        <div style="display: flex; align-items: center; border: 1px solid #dadd18; border-radius: 5px; padding: 5px;">
+            <img src="icon.png" alt="Logo" style="height: 40px; margin-right: 10px; border: 2px solid #000000; border-radius: 5px;">
+            <span style="font-family: 'BusinessFont', sans-serif; font-size: 24px; color: #ffffff; font-weight: bold; text-shadow: 1px 1px 2px #aaa;">PhoenixAlgo</span>
+        </div>
+        <button class="menu-toggle">☰</button> <!-- Burger icon -->
+        <div class="nav-container" style="margin-left: 40px;">
             <div class="nav-links has-dropdown">
                 <a href="#" class="dropdown-toggle">Courses ▾</a>
                 <ul class="dropdown">
